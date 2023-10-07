@@ -1,16 +1,14 @@
-const dice1 = document.createElement("p");
-const dice2 = document.createElement("p");
+var dice = document.getElementById("dice1");
+var dicee = document.getElementById("dice2");
 
 function rollDiced(){
-    dice1.textContent = roll();
-    dice2.textConent = roll();
 
-    document.body.appendChild(dice1);
-    document.body.appendChild(dice2);
+    dice.value = roll();
+    dicee.value = roll();
 }
 
 document.querySelector("button").addEventListener("click", rollDiced);
 
 function roll(){
-    document.body.append(Math.floor(Math.random() * 7));
+    return(Math.floor(Math.random() * 7));
 }
